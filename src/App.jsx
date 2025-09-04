@@ -2,10 +2,58 @@
  * App composes the root layout component for clean entry.
  * Single responsibility: export the chosen root layout.
  */
-import AppLayout from './layouts/AppLayout.jsx'
 
-function App() {
-  return <AppLayout />
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import EmptyState from "./screens/EmptyState.jsx";
+import ChatWindow from "./screens/ChatWindow.jsx";
+import NewChat from "./screens/NewChat.jsx";
+import { useNavigate, useParams } from "react-router-dom";
+import { useChats } from "./context/ChatsContext.jsx";
+import AppLayout from "./layouts/AppLayout.jsx";
+
+function ChatListWrapper() {
+  const { chats } = useChats();
+  const navigate = useNavigate();
+  return (
+    <ChatList
+      items={chats}
+      onSelectChat={(id) => navigate(`/chats/${id}`)}
+      onNewChat={() => navigate("/new")}
+    />
+  );
 }
 
-export default App
+function ChatWindowWrapper() {
+  const { chats } = useChats();
+  const navigate = useNavigate();
+  const { chatId } = useParams();
+  const chat = chats.find((c) => c.id === chatId);
+  if (!chat) return <div className="p-4">Chat not found.</div>;
+  return <ChatWindow chat={chat} onBack={() => navigate("/")} />;
+}
+
+function NewChatWrapper() {
+  const { createChat } = useChats();
+  const navigate = useNavigate();
+  function handleCreate(name, msg) {
+    const chat = createChat(name, msg);
+    navigate(`/chats/${chat.id}`);
+  }
+  return <NewChat onBack={() => navigate("/")} onCreate={handleCreate} />;
+}
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+    children: [
+      { index: true, element: <EmptyState /> },
+      { path: "chats/:chatId", element: <ChatWindowWrapper /> },
+      { path: "new", element: <NewChatWrapper /> },
+    ],
+  },
+]);
+
+export default function App() {
+  return <RouterProvider router={router} />;
+}

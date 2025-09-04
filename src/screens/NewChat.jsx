@@ -32,7 +32,7 @@ export default function NewChat({ onBack, onCreate }) {
       </Toolbar>
 
       <div className="grid gap-2">
-        <label className="text-sm text-neutral-400">Participant name</label>
+        <label className="text-md text-neutral-400">Participant name</label>
         <TextInput
           value={name}
           onChange={(e) => setName(e.target.value)}
@@ -40,13 +40,16 @@ export default function NewChat({ onBack, onCreate }) {
         />
       </div>
 
-      <div className="flex gap-2">
+      <div className="flex gap-4">
         <Button
           variant="secondary"
           disabled={!name.trim()}
           onClick={generateIcebreaker}
         >
           Generate Icebreaker
+        </Button>
+        <Button onClick={handleCreate} disabled={!name.trim()}>
+          Create Chat
         </Button>
       </div>
 
@@ -56,12 +59,6 @@ export default function NewChat({ onBack, onCreate }) {
           <div>{icebreaker}</div>
         </Panel>
       )}
-
-      <div>
-        <Button onClick={handleCreate} disabled={!name.trim()}>
-          Create Chat
-        </Button>
-      </div>
     </div>
   );
 }
