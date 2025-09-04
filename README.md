@@ -1,12 +1,68 @@
-# React + Vite
+# Smart Team Chat
+---
+### Smart Team Chat is a prototype chat application designed for teams. It provides a simple yet effective interface to start conversations, view ongoing chats, and experiment with **AI-powered features** like message summarization and smart reply suggestions. 
+---
+## 🛠️ Tech Stack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- **Frontend:** React.js, Vite  
+- **Styling:** Tailwind CSS (or your chosen CSS framework)  
+- **AI Placeholders:** Static/dummy data for now (future integration with AI APIs possible)  
+---
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🔹 1. New Chat
+- Start a new conversation by entering a participant's name.  
+- Includes an **AI-powered "Generate Icebreaker"** button → generates a friendly placeholder message to kick off the chat.  
 
-## Expanding the ESLint configuration
+### 🔹 2. Chat List (Sidebar)
+- Scrollable sidebar showing all existing chats.  
+- Each chat displays:  
+  - **Name** of the participant/team  
+  - **Last message preview**  
+  - **Timestamp** of the latest activity  
+- Built-in **Search bar** to quickly filter chats by **name** or **last message**.  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🔹 3. Chat Window
+- Displays the **full conversation** of a selected team chat.  
+- Includes AI utility buttons:  
+  - **Summarize Thread** → shows a quick example summary of the conversation.  
+  - **Smart Reply Suggestion** → suggests a placeholder auto-reply.  
+
+---
+
+## 🖼️ UI Overview
+
+- **New Chat Screen** → Enter participant name + Generate Icebreaker.  
+- **Chat List Sidebar** → Scrollable list with search functionality.  
+- **Chat Window** → Conversation view with summarization & reply suggestion.  
+
+---
+
+## ⚙️ Installation & Setup
+
+Follow these steps to run the project locally:
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/smart-team-chat.git
+cd smart-team-chat
+```
+### 2. Install Dependencies
+```bash
+npm install
+```
+
+### 3. Run the Development Server
+```bash
+npm run dev
+```
+
+### The app will be available at:
+👉 http://localhost:5173 (default for Vite projects)
+
+---
+
+## 📌 Notes
+- This is a **prototype/demo project**, AI responses (icebreaker, summary, smart replies) are placeholders only.  
+- Can be extended with **real AI APIs** (like OpenAI) for production-ready features.  
