@@ -101,7 +101,7 @@ export default function ChatWindow({ chat, onBack }) {
       <div className="grid grid-cols-[1fr_auto_auto] gap-2 border-t border-neutral-800 bg-neutral-950 p-2 md:p-3">
         <input disabled className="w-full rounded-md border border-neutral-800 bg-neutral-900 px-3 py-2 text-sm text-neutral-100 placeholder-neutral-500" placeholder="Type a message (dummy, no send)" />
         <Button disabled>Send</Button>
-        <Button variant="secondary" onClick={generateSmartReply}>Smart Reply</Button>
+        <Button variant="secondary" onClick={generateSmartReply}>Smart Reply Suggestion</Button>
       </div>
     </div>
   )

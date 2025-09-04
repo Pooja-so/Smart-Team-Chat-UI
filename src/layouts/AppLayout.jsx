@@ -3,7 +3,7 @@
  * Single responsibility: two-pane layout shell with Outlet for content.
  */
 import { Outlet, useLocation } from 'react-router-dom'
-import Sidebar from '../components/Sidebar.jsx'
+import Sidebar from './Sidebar.jsx'
 
 export default function AppLayout() {
   const { pathname } = useLocation()

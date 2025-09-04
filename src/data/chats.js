@@ -7,12 +7,12 @@ export const chats = [
     id: 'c1',
     name: 'Design Team',
     lastMessage: 'Let’s finalize the color palette today.',
-    time: '09:24',
+    time: '09:24 am',
     messages: [
-      { id: 'm1', author: 'Alex', text: 'Morning team! Updates on the palette?', time: '09:01' },
-      { id: 'm2', author: 'Priya', text: 'Shared three options in Figma.', time: '09:10' },
-      { id: 'm3', author: 'Sam', text: 'Option B feels more accessible.', time: '09:18' },
-      { id: 'm4', author: 'Priya', text: 'Agree. Let’s finalize the color palette today.', time: '09:24' },
+      { id: 'm1', author: 'Alex', text: 'Morning team! Updates on the palette?', time: '09:01 am' },
+      { id: 'm2', author: 'Priya', text: 'Shared three options in Figma.', time: '09:10 pm' },
+      { id: 'm3', author: 'Sam', text: 'Option B feels more accessible.', time: '09:18 am' },
+      { id: 'm4', author: 'Priya', text: 'Agree. Let’s finalize the color palette today.', time: '09:24 pm' },
     ],
   },
   {
@@ -21,8 +21,8 @@ export const chats = [
     lastMessage: 'Pushed the new auth flow behind a flag.',
     time: 'Yesterday',
     messages: [
-      { id: 'm1', author: 'Mina', text: 'Login redirect bug is fixed.', time: '15:07' },
-      { id: 'm2', author: 'Ishaan', text: 'Pushed the new auth flow behind a flag.', time: '16:12' },
+      { id: 'm1', author: 'Mina', text: 'Login redirect bug is fixed.', time: '15:07 pm' },
+      { id: 'm2', author: 'Ishaan', text: 'Pushed the new auth flow behind a flag.', time: '16:12 am' },
     ],
   },
   {
@@ -31,8 +31,8 @@ export const chats = [
     lastMessage: 'Draft blog post is ready for review.',
     time: 'Mon',
     messages: [
-      { id: 'm1', author: 'Rita', text: 'Campaign assets uploaded to Drive.', time: '10:32' },
-      { id: 'm2', author: 'Leo', text: 'Draft blog post is ready for review.', time: '11:05' },
+      { id: 'm1', author: 'Rita', text: 'Campaign assets uploaded to Drive.', time: '10:32 pm' },
+      { id: 'm2', author: 'Leo', text: 'Draft blog post is ready for review.', time: '11:05 am' },
     ],
   },
   {
@@ -41,9 +41,9 @@ export const chats = [
     lastMessage: 'Client agreed to move forward with the pilot.',
     time: 'Tue',
     messages: [
-      { id: 'm1', author: 'Dana', text: 'Call with Acme scheduled for 3pm.', time: '09:45' },
-      { id: 'm2', author: 'Omar', text: 'They’re interested in quarterly billing.', time: '11:20' },
-      { id: 'm3', author: 'Dana', text: 'Client agreed to move forward with the pilot.', time: '14:05' },
+      { id: 'm1', author: 'Dana', text: 'Call with Acme scheduled for 3pm.', time: '09:45 am' },
+      { id: 'm2', author: 'Omar', text: 'They’re interested in quarterly billing.', time: '11:20 pm' },
+      { id: 'm3', author: 'Dana', text: 'Client agreed to move forward with the pilot.', time: '14:05 am' },
     ],
   },
   {
@@ -52,9 +52,9 @@ export const chats = [
     lastMessage: 'Status page updated; incident resolved.',
     time: 'Today',
     messages: [
-      { id: 'm1', author: 'Kai', text: 'Seeing spikes in 500s for EU region.', time: '08:11' },
-      { id: 'm2', author: 'Mira', text: 'Rolled back the last deployment.', time: '08:26' },
-      { id: 'm3', author: 'Kai', text: 'Status page updated; incident resolved.', time: '08:55' },
+      { id: 'm1', author: 'Kai', text: 'Seeing spikes in 500s for EU region.', time: '08:11 pm' },
+      { id: 'm2', author: 'Mira', text: 'Rolled back the last deployment.', time: '08:26 am' },
+      { id: 'm3', author: 'Kai', text: 'Status page updated; incident resolved.', time: '08:55 am' },
     ],
   },
   {
@@ -63,8 +63,8 @@ export const chats = [
     lastMessage: 'Posted benchmark results for the new model.',
     time: 'Sun',
     messages: [
-      { id: 'm1', author: 'Jules', text: 'New dataset cleaned and labeled.', time: '09:14' },
-      { id: 'm2', author: 'Tariq', text: 'Posted benchmark results for the new model.', time: '12:37' },
+      { id: 'm1', author: 'Jules', text: 'New dataset cleaned and labeled.', time: '09:14 pm' },
+      { id: 'm2', author: 'Tariq', text: 'Posted benchmark results for the new model.', time: '12:37 am' },
     ],
   },
   {
@@ -73,10 +73,8 @@ export const chats = [
     lastMessage: 'SLA dashboard is green across all regions.',
     time: 'Sat',
     messages: [
-      { id: 'm1', author: 'Ivy', text: 'Rotating pager schedules next week.', time: '16:08' },
-      { id: 'm2', author: 'Rob', text: 'SLA dashboard is green across all regions.', time: '18:22' },
+      { id: 'm1', author: 'Ivy', text: 'Rotating pager schedules next week.', time: '16:08 pm' },
+      { id: 'm2', author: 'Rob', text: 'SLA dashboard is green across all regions.', time: '18:22 am' },
     ],
   },
 ]
-
-
